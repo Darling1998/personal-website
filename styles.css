@@ -1,0 +1,495 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial;
+    background: black;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #202505;
+    padding: 22px 16%;
+    border-bottom: 1px solid transparent;
+    transition: all .40s ease;
+}
+/* 
+.logo img {
+    width: 135px;
+    height: auto;
+} */
+
+.navbar {
+    display: flex;
+}
+
+a {
+    color: #5DD9CC;
+}
+
+.navbar a {
+    font-weight: 600;
+    padding: 10px 25px;
+    margin: 0 2px;
+    border-radius: 0.5rem;
+    transition: all .40s ease;
+}
+
+.navbar a:hover {
+    background: #5DD9CC;
+    color: white;
+}
+
+#menu-icon {
+    font-size: 36px;
+    color: var(#fff);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+ .banner-home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.banner-home .imgHome {
+    position: absolute;
+    width: 500px;
+    height: 100%;
+}
+
+.banner-home .imgHome img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+ .banner-home .contentHome {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 550px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+
+}
+
+/* .logoText {
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #fff;
+    color: #333;
+    padding: 0 5px;
+} */
+
+.banner-home .contentHome h4 {
+    font-size: 1.5em;
+    color: #5DD9CC;
+    font-weight: 300;
+
+}
+
+.banner-home .contentHome h4 span {
+    color: #5DD9CC;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner-home .contentHome h2 {
+    font-size: 3em;
+    color: #fff;
+    line-height: 1em;
+}
+
+p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 300;
+    display: flex;
+    text-align: center;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.title h2 {
+    position: relative;
+    color: #5DD9CC;
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.title p {
+    max-width: 700px;
+    display: inline-block;
+}
+
+.title h2:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background: #fff;
+}
+
+
+.about {
+    padding-bottom: 10px;
+}
+
+.about .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+
+}
+
+.about .content .textBx {
+    min-width: 49%;
+    width: 49%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.about .content .textBx p {
+    color: white
+}
+
+.about .content .imgBx {
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.about .content .imgBx img {
+    width: 60%;
+    height: 60%;
+}
+
+.services .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.services .content .servicesBx {
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 340px;
+    margin: 20px;
+    transition: 0.5s;
+    text-align: center;
+    background: rgb(150, 141, 141);
+}
+
+.services .content .servicesBx:hover {
+    background: #fff;
+    color: black;
+}
+
+.services .content .servicesBx img {
+    max-width: 80px;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx h2 {
+    margin-top: 20px;
+}
+
+.work .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.work .content .workBx {
+    position: relative;
+    width: 265px;
+    height: 265px;
+    margin: 10px;
+    transition: 0.5s;
+    text-align: center;
+    background: rgb(150, 141, 141);
+}
+
+.work .content .workBx .imgBx, .work .content .textBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work .content .workBx .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work .content .workBx .textBx {
+    background: white;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.work .content .workBx:hover .textBx {
+    opacity: 1;
+}
+
+.work .content .workBx .textBx h3 {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1em;
+}
+
+.contact {
+    background: white;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .contactForm {
+    position: relative;
+    width: 100%x;
+    margin-top: 20px;
+}
+
+.contact .contactForm .row {
+    width: 100%;
+    display: flex;
+}
+
+.contact .contactForm .row .col50 {
+    width: 50%;
+    margin: 10px;
+}
+
+.contact .contactForm .row .col100 {
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+}
+
+.contact .contactForm .row textarea {
+    height: 100px;
+}
+
+.contact .contactForm .row input, .contact .contactForm .row textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    font-size: 16px;
+    resize: none;
+}
+
+.contact .contactForm .row button {
+    background: #5DD9CC;
+    color: black;
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    max-width: 180px;
+}
+
+.copyright {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 16px;
+}
+
+section {
+    padding: 90px;
+    min-height: 50vh;
+}
+
+@media (max-width: 1325px) {
+    header {
+        padding: 16px 3%;
+    }
+
+    header.sticky {
+        padding: 8px 3%;
+    }
+
+    section {
+        padding: 100px 3% 60px;
+    }
+}
+
+@media (max-width: 970px) {
+    :root {
+        --h1-font: 4.2rem;
+        --h2-font: 2.9rem;
+        --p-font: 1rem;
+    }
+
+
+
+    /* 
+    .home {
+        height: 85vh;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-img {
+        text-align: center;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    } */
+    .imgHome {
+        display: none;
+    }
+
+/*     .banner-home .contentHome {
+        width: 100%;
+        padding: 40px;
+    } */
+
+/*     .logoText {
+        left: 40px;
+    }
+ */
+    section {
+        padding: 20px;
+    }
+
+    .about .content {
+        flex-direction: column;
+    }
+
+    .about .content .textBx {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .about .content {
+        margin-top: 0;
+    }
+
+    .about .content .imgBx {
+        margin-left: 0;
+    }
+
+    .services .content .servicesBx {
+        padding: 30px 20px;
+        max-width: 340px;
+        margin: 10px;
+    }
+
+    .contactForm {
+        width: 100%;
+    }
+
+    .contactForm .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact .contactForm .row .col50 {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 830px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: -600px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: #eeeef1;
+        text-align: left;
+        transition: all .10s ease;
+        align-items: center;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .navbar.active {
+        top: 100%;
+    }
+
+    :root {
+        --h1-font: 3.7rem;
+        --h2-font: 2.7rem;
+    }
+}
